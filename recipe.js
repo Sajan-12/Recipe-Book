@@ -168,7 +168,7 @@ function startApp() {
       recipes=sampleRecipes;
       saveRecipes();
      }
-    console.log("Using sample recipes:", recipes.length)
+
   // Set the next ID
   nextId = Math.max(...recipes.map((recipe) => recipe.id), 0) + 1
   console.log("Next ID:", nextId)
@@ -218,12 +218,6 @@ function renderRecipes() {
                 <button id="clear-filters-btn" class="btn secondary-btn">Clear Filters</button>
             </div>
         `
-
-    document.getElementById("clear-filters-btn").addEventListener("click", () => {
-      searchInput.value = ""
-      setActiveCategory("all")
-      renderRecipes()
-    })
 
     return
   }
