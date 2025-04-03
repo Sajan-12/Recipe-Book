@@ -161,7 +161,7 @@ const sampleRecipes = [
 // Initialize the app
 function startApp() {
      const savedRecipes=localStorage.getItem("recipes");
-     if(saveRecipes){
+     if(savedRecipes){
       recipes=JSON.parse(savedRecipes);
      }
      else{
@@ -170,6 +170,7 @@ function startApp() {
      }
 
   // Set the next ID
+  
   nextId = Math.max(...recipes.map((recipe) => recipe.id), 0) + 1
   console.log("Next ID:", nextId)
 
